@@ -32,7 +32,7 @@ const chemicalReducer = createSlice({
             })
 
             Object.keys(state.elements).forEach((k) => {
-                massFraction[k] = Math.floor(((state.elements[k] * elementsMap.get(k)!.atomic_mass) / molecularMass) * 100)
+                massFraction[k] = Math.round(state.elements[k] * elementsMap.get(k)!.atomic_mass / molecularMass * 100)
             })
             state.molecularMass = molecularMass
             state.massFraction = massFraction

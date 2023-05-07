@@ -13,5 +13,3 @@ export type AppDispatch = typeof store.dispatch
 
 export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
 export const useTypedDispatch: () => AppDispatch = useDispatch
-
-"Na2Cl"
